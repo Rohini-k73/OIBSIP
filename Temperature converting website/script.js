@@ -1,68 +1,27 @@
-console.log('Welcome to 🌡️ Temperature Converter');
+// script.js
+const celsiusElem = document.querySelector("#celsius");
+const degree = document.querySelector("#degree");
+const convertBtn = document.querySelector("#convert-btn");
+const tempType = document.querySelector("#temp-type");
 
-const tempLoad = () => {
-    let fa = document.getElementById('fa');
-    fa.innerHTML = "&#xf2cb";
-    fa.style.color = "#ffa41b";
+window.addEventListener("load", () => {
+  degree.value = "";
+  celsiusElem.innerHTML = "";
+});
 
-    setTimeout(() => {
-        fa.innerHTML = "&#xf2ca;";
-        fa.style.color = "#ffa41b";
-    }, 1000)
+convertBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  convertToCelsius();
+});
 
-    setTimeout(() => {
-        fa.innerHTML = "&#xf2c9;";
-    }, 2000)
+function convertToCelsius() {
+  let inputValue = degree.value;
 
-    setTimeout(() => {
-        fa.innerHTML = "&#xf2c8;";
-    }, 3000)
-
-    setTimeout(() => {
-        fa.innerHTML = "&#xf2c7;";
-        fa.style.color = "#ff5151";
-    }, 4000)
-}
-
-setInterval(() => {
-    fa.style.color = "#ffa41b";
-    tempLoad();
-}, 5000);
-
-
-tempLoad();
-
-const calculateTemp = () => {
-    const numberTemp = document.getElementById('temp').value;
-    // console.log(numberTemp);
-
-    const tempSelected = document.querySelector('#temp_diff');
-    const valeTemp = temp_diff.options[tempSelected.selectedIndex].value;
-    // console.log(valeTemp);
-
-
-    // Convert temperature from Celcius to Fahrenheit
-    const celTOfah = (cel) => {
-        let fahrenheit = (cel * (9 / 5) + 32);
-        return fahrenheit;
-    }
-
-    // Convert temperature from Fahrenheit to Celsius
-    const fahTOcel = (fehr) => {
-        let celsius = ((fehr - 32) * 5 / 9);
-        return celsius;
-    }
-
-    let result;
-    if (valeTemp == "cel") {
-        result = celTOfah(numberTemp);
-        document.getElementById('resultContainer').innerHTML = `= ${result}°Fahrenheit`;
-    } else {
-        result = fahTOcel(numberTemp);
-        document.getElementById('resultContainer').innerHTML = `= ${result}°Celsius`;
-    }
-
-    setTimeout(() => {
-        window.location.reload();
-    }, 1500);
+if (tempType.value === "fahrenheit") {
+    const FahrenheitToCelsius = (inputValue - 32) * (5 / 9);
+    celsiusElem.innerHTML = `${FahrenheitToCelsius.toFixed(3)} &deg;c`;
+  } else if (tempType.value === "kelvin") {
+    const KelvinToCelsius = inputValue - 273.15;
+    celsiusElem.innerHTML = `${KelvinToCelsius.toFixed(3)} &deg;c`;
+  }
 }
