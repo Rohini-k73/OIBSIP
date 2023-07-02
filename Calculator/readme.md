@@ -1,4 +1,4 @@
-# Calculations
+# Calculator
 
 - index.html: Contains the HTML structure of the calculator interface.
 
