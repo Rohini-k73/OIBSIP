@@ -1,6 +1,29 @@
 # OIBSIP
+## OIBSIP Internship Level 2 Tasks
 
-## OIBSIP Internship Level 1 Tasks
+ This repository contains the completed tasks for Level 2 of the OIBSIP Internship. The tasks include creating a Calculator, Tribute page, and a To Do webapp.
+
+## Tasks Completed
+
+##  Calculator
+This is a simple calculator application that allows you to perform basic arithmetic operations. It provides a user-friendly interface for entering mathematical expressions and obtaining the results quickly. The calculator supports addition, subtraction, multiplication, and division operations.
+
+Repo link- https://github.com/Rohini-k73/OIBSIP/tree/main/Calculator
+
+## Tribute Page
+
+To successfully complete the APJ Abdul Kalam Tribute Page project
+
+Repo Link - https://github.com/Rohini-k73/OIBSIP/tree/main/Tribute%20Page
+
+## To Do Web application
+
+This is a simple Todo List application built using HTML, CSS, and JavaScript. It allows users to manage and keep track of their tasks in a convenient way.
+
+Repo Link - https://github.com/Rohini-k73/OIBSIP/tree/main/To-Do-List
+
+
+# OIBSIP Internship Level 1 Tasks
 
  This repository contains the completed tasks for Level 1 of the OIBSIP Internship. The tasks include creating a Landing Page, Portfolio, and a Temperature Converter website.
 
